@@ -1,0 +1,16 @@
+{
+  "version": "1.0.0",
+  "product": "BTP Translator",
+  "owner": "HAMDAN SYSTEMS",
+  "author": "Hamdan Ahmed Iftikhar Ali",
+  "notes": [
+    "First release of BTP Translator.",
+    "Python and Pybricks programs translate into Blockly blocks on your computer.",
+    "The installer includes the application runtime. Python and Node.js are not required after installation."
+  ],
+  "requirements": [
+    "Windows 10 or Windows 11, 64-bit",
+    "Enough free disk space for the installer and its bundled runtime",
+    "No separate Python, Node.js, or terminal setup"
+  ]
+}

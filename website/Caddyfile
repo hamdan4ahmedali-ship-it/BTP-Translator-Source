@@ -1,0 +1,7 @@
+# Do not start this file until public hosting is approved.
+# Starting it listens on ports 80 and 443 and requests a public certificate.
+# Those ports are already used by the HSS rules ACME-HTTP and HSS-HTTPS.
+# Do not change those rules and do not bind over HSS.
+btptranslator.linkpc.net {
+	reverse_proxy 127.0.0.1:4173
+}

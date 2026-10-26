@@ -1,0 +1,15 @@
+node_modules/
+out/
+release/
+dist/
+*.log
+.DS_Store
+website/data/downloads.json
+website/data/*.tmp
+website/data/*.log
+website/data/*.pid
+website/.env
+tools/caddy/
+website/releases/*.exe
+website/releases/*.blockmap
+*.tsbuildinfo

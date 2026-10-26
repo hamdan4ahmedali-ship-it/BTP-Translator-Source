@@ -1,0 +1,43 @@
+{
+  "name": "btp-translator",
+  "productName": "BTP Translator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Translate Python and Pybricks programs into Blockly blocks. Owned by HAMDAN SYSTEMS.",
+  "author": "Hamdan Ahmed Iftikhar Ali <hamdan4ahmedali@gmail.com>",
+  "license": "UNLICENSED",
+  "type": "module",
+  "main": "out/main/index.js",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "preview": "electron-vite preview",
+    "test": "vitest run",
+    "test:website": "node --test website/test/counter.test.js",
+    "icons": "node scripts/generate-icons.mjs",
+    "typecheck": "tsc --noEmit",
+    "dist": "npm run icons && npm run build && electron-builder --win && node scripts/copy-installer.mjs",
+    "website": "node website/server.js",
+    "website:start": "powershell -NoProfile -ExecutionPolicy Bypass -File website/start-website.ps1",
+    "website:stop": "powershell -NoProfile -ExecutionPolicy Bypass -File website/stop-website.ps1",
+    "caddy:validate": "tools\\caddy\\caddy.exe validate --config website/Caddyfile && tools\\caddy\\caddy.exe validate --config website/Caddyfile.local",
+    "caddy:local": "tools\\caddy\\caddy.exe run --config website/Caddyfile.local"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "electron": "^45.0.0",
+    "electron-builder": "^26.18.0",
+    "electron-vite": "^6.0.0",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  },
+  "dependencies": {
+    "@lezer/common": "^1.5.4",
+    "@lezer/python": "^1.1.19",
+    "blockly": "^13.4.0",
+    "monaco-editor": "^0.57.0"
+  }
+}

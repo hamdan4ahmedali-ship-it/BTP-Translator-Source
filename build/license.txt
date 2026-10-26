@@ -1,0 +1,5 @@
+BTP Translator
+Copyright © HAMDAN SYSTEMS
+Made by Hamdan Ahmed Iftikhar Ali
+
+This application translates Python and Pybricks programs into Blockly blocks on your computer.

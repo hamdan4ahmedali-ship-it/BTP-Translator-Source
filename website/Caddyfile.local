@@ -1,0 +1,10 @@
+{
+	admin off
+	auto_https off
+	default_bind 127.0.0.1
+}
+
+http://127.0.0.1:8443 {
+	bind 127.0.0.1
+	reverse_proxy 127.0.0.1:4173
+}

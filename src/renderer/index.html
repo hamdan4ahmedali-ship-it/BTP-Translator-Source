@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BTP Translator</title>
+  </head>
+  <body>
+    <section id="brand" class="splash" aria-label="HAMDAN SYSTEMS">
+      <div class="lockup">
+        <p class="brand-word">HAMDAN SYSTEMS</p>
+        <div class="flag" aria-hidden="true"><span>H</span></div>
+      </div>
+    </section>
+
+    <section id="ownership" class="splash" hidden>
+      <div class="ownership-copy">
+        <p>THE BTP TRANSLATOR IS OWNED BY HAMDAN SYSTEMS.</p>
+        <p>MADE BY HAMDAN AHMED IFTIKHAR ALI.</p>
+        <p>contact us on snapchat "hamdan.ahmed1"</p>
+        <p>contact us on discord "hamdanisbetter"</p>
+        <p>contact us on instagram "hamdanisbetter"</p>
+        <p>contact us on gmail "hamdan4ahmedali@gmail.com"</p>
+      </div>
+      <p class="skip">Press [Spacebar] to skip</p>
+    </section>
+
+    <div id="app" class="app" hidden>
+      <header class="toolbar">
+        <div class="brand">
+          <span class="mini-flag" aria-hidden="true">H</span>
+          <div>
+            <strong>BTP Translator</strong>
+            <em>HAMDAN SYSTEMS</em>
+          </div>
+        </div>
+        <div class="tools">
+          <button id="new-file" type="button" title="New file (Ctrl+N)">New</button>
+          <button id="open-file" type="button" title="Open a Python file (Ctrl+O)">Open</button>
+          <button id="save-file" type="button" title="Save (Ctrl+S)">Save</button>
+          <button id="save-as" type="button" title="Save As (Ctrl+Shift+S)">Save As</button>
+          <button id="translate" class="primary" type="button" title="Translate Python into Blockly blocks (Ctrl+Enter)">Translate</button>
+          <button id="fit" type="button" title="Fit blocks in the workspace">Fit</button>
+          <button id="reset-view" type="button" title="Center the Blockly view">Center</button>
+          <button id="clear-blocks" type="button" title="Clear blocks without changing the Python code">Clear blocks</button>
+          <button id="export" type="button" title="Save the Blockly workspace as JSON">Export</button>
+          <button id="copy-output" type="button" title="Copy the workspace JSON">Copy</button>
+          <button id="settings" type="button" title="Editor settings">Settings</button>
+          <button id="help" type="button" title="Supported syntax (F1)">Help</button>
+          <button id="about" type="button" title="About BTP Translator">About</button>
+        </div>
+      </header>
+
+      <div class="workspace-row">
+        <aside class="sidebar">
+          <section>
+            <h2>Examples</h2>
+            <div id="examples"></div>
+          </section>
+          <section>
+            <h2>File</h2>
+            <p id="file-name" class="file-name">welcome.py</p>
+            <p id="file-path" class="file-path">Not saved yet</p>
+            <button id="clear-editor" type="button" class="text-button" title="Clear the Python editor">Clear editor</button>
+          </section>
+          <section>
+            <h2>History</h2>
+            <div id="history"></div>
+          </section>
+        </aside>
+
+        <div class="centre">
+          <div id="split" class="split">
+            <section id="editor-pane" class="pane">
+              <div class="pane-tab">
+                <span id="tab-name">welcome.py</span>
+                <span class="direction">Python source</span>
+              </div>
+              <div id="editor" class="editor"></div>
+            </section>
+            <div id="split-handle" class="split-handle" title="Drag to resize"></div>
+            <section class="pane block-pane">
+              <div class="pane-tab">
+                <span>Blockly workspace</span>
+                <span class="direction">Python → Blockly</span>
+              </div>
+              <div id="blocks" class="blocks"></div>
+            </section>
+          </div>
+          <div id="panel-handle" class="panel-handle" title="Drag to resize the problems panel"></div>
+          <section id="panel" class="panel">
+            <div class="panel-head">
+              <h2>Problems</h2>
+              <p id="summary">Press Translate to turn the Python program into blocks.</p>
+            </div>
+            <div id="problems"></div>
+          </section>
+        </div>
+      </div>
+
+      <footer class="statusbar">
+        <span id="status-direction">Python → Blockly</span>
+        <span id="status-translation">Ready</span>
+        <span id="status-counts">No translation yet</span>
+        <span id="cursor">Ln 1, Col 1</span>
+        <span>v<span id="version">1.0.0</span></span>
+      </footer>
+    </div>
+
+    <div id="modal" class="modal" hidden>
+      <div id="modal-card" class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <h2 id="modal-title"></h2>
+        <div id="modal-body"></div>
+        <div id="modal-actions"></div>
+      </div>
+    </div>
+    <input id="file-input" type="file" accept=".py,text/x-python" hidden />
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+appId: com.hamdansystems.btptranslator
+productName: BTP Translator
+copyright: Copyright © HAMDAN SYSTEMS. Made by Hamdan Ahmed Iftikhar Ali.
+directories:
+  output: release
+  buildResources: build
+files:
+  - out/**/*
+  - package.json
+extraMetadata:
+  main: out/main/index.js
+asar: true
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+  icon: build/icon.ico
+  artifactName: BTP-Translator-Setup.${ext}
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  allowElevation: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: BTP Translator
+  uninstallDisplayName: BTP Translator
+  displayLanguageSelector: false
+  installerIcon: build/icon.ico
+  uninstallerIcon: build/icon.ico
+  license: build/license.txt
